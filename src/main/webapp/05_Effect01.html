@@ -9,6 +9,31 @@
 
 <script src="./js/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
+	$(function(){
+		
+		$('button:eq(0)').click(function(){	
+			$('span:first').show();			
+		});
+		
+		$('button:eq(1)').click(function(){	
+			$('span:eq(0)').hide();			
+		});
+		
+		$('button:eq(2)').click(function(){	
+			$('span:last').show('slow', function(){
+				$(this).css('background','yellow');
+			});  //slow normal, fast 존재 , 기능이 끝난 후 함수 시작			
+		});
+		
+		$('button:eq(3)').click(function(){	
+			$('span:eq(1)').hide('slow',function(){
+				$(this).css('background', '')
+				
+			});			
+		});
+		
+	});
+
 </script>
 	
 </head>

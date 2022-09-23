@@ -7,11 +7,24 @@
             margin:3px;
             background-color: orange;
             position: relative;
+            
         }
     </style>
     <script src="./js/jquery-3.6.1.min.js"></script>
     <script>
-        
+        $(function(){
+        	$('div').hover(function(){
+        		$(this).animate({
+        			left : 500	
+        		}, 'fast');
+        	},function(){
+        		$(this).animate({
+        			left:0
+        		},'slow')
+        	}
+        	)	
+        	});
+ 
     </script>
 </head>
 <body>

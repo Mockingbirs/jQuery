@@ -190,17 +190,35 @@
 // */
 
 /* 11. 문서 객체의 생성(1)  
+ 
+ $(function(){
+ 	//-기존 자바스크립트로 구현 방법.
+ 	//<h2>Hello DOM</h2>
+ 	
+ 	//	1. 문서 객체 생성
+ 			var header = document.createElement('h2');
+ 			var textNode = document.createTextNode('Hello DOM');
+ 			
+	//	2. 노드(요소/텍스트)를 연결.	
+ 			header.appendChild(textNode);
+		
+	//	3. body 문서 객체에 header 문서 객체를 추가.
+			document.body.appendChild(header);
+ });	
+ 
+ 
+ 
 //- 텍스트 노드를 갖는 문서 객체를 생성하는 방법.
 //- $(): 문서 객체 생성.
 //- $() 함수의 매개 변수에 HTML 태그를 문자열로 넣기만 하면 문서 객체가 생성됨.
 
 //- 생성한 문서 객체를 body 태그에 추가하는 방법1.
 	//$(document).ready(function(){});
-	
+	*/
 	$(function(){
 		$('<h1></h1>').html('Hello jQuery...!').appendTo('body');
 	});
-
+/*
 //- $() 메서드의 내부에 HTML 태그를 바로 넣어 body 태그에 추가하는 방법2
 
 	$(function(){
@@ -335,11 +353,12 @@
     <h1>Header-2</h1>
  -->
 
-<!-- 9-1. 문서 객체의 내부 추가  -->
+<!-- 9-1. 문서 객체의 내부 추가  
     <div></div>
     <div></div>
     <div></div>
-
+&lt;h1&gt;$().text()&lt;h1&gt;
+-->
 
 <!-- 9-2. 문서 객체의 내부 추가
     <h1>Header-0</h1>

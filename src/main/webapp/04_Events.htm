@@ -159,7 +159,7 @@
 	$(function(){
 		$('div').on('click', function(){
 			$(this).clone().appendTo('body');
-		});
+		});	
 	});
 // */
 
@@ -168,10 +168,10 @@
 // - dbclick : 마우스 더블클릭할 때 이벤트 발생.
 // - mousedown : 마우스 버튼을 누를 때 이벤트 발생.
 // - mouseup : 마우스 버튼을 뗄 때 이벤트 발생.
-// - mouseenter : 마우스가 요소의 경계 외부에서 내부로 이동할 때 발생. 
+// - mouseenter : 마우스가 요소의 경계 외부에서 내부로 이동할 때 발생. 들어온 요소 안에서 다른요소로 이동에서는 반응하지않음
 // - mouseleave : 마우스가 요소의 경계 내부에서 외부로 이동할 때 발생.
 // - mousemove : 마우스를 움직일 때 발생.
-// - mouseout : 마우스가 요소를 벗어날 때 발생.
+// - mouseout : 마우스가 요소를 벗어날 때 발생. 들어온 요소 안에서 다른요소로 이동 시 다시 작동
 // - mouseover : 마우스가 요소 안에 들어올 때 발생.
 
 	$(function(){
@@ -238,7 +238,7 @@
         <h1>Header3</h1>
         <p>Paragraph3</p>
     </div>
--->
+--> 
 
 <!-- 5-1). 이벤트 강제 발생 
     <h1>Start: </h1>
@@ -252,6 +252,7 @@
 <!-- 6. 기본 이벤트 제거 
     <h1>
         <a href="https://www.naver.com">네이버</a>
+
     </h1>
 -->
 
@@ -260,8 +261,8 @@
         <h1>$(selector).on()</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
--->
 
+-->
 <!-- 8. 마우스 이벤트 
     <div class="outer">
         <div class="inner"></div>
